@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+        <p style="color: red">放入需要校验的账户excel,输出的excel为过滤好的被标记数 >= 1的账户</p>
+
+        <form method="post" enctype="multipart/form-data" action="/check/filter">
+            <p>文件：<input type="file" name="file"/></p>
+            <p>token: <input type="text" name="token"/></p>
+            <p>文件类型:
+                <input type='radio'  name='type' value='1' checked>json</input>
+                <input type='radio'  name='type' value='2'>excel</input>
+            </p>
+            <p><input type="submit" name="提交"/></p>
+        </form>
+</body>
+</html>
